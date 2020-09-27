@@ -37,14 +37,14 @@ These three functions return [Promises](https://javascript.info/async) which are
 
 ```
 on("sheet:opened", async ()=>{
-  var values = await getAttrsAsync(["hp","rec"]));
-  var newHp=values.hp + values.rec;
-  await setAttrsAsync({hp:newHp});
-  values = await getAttrsAsync(["hp"]));
-  console.assert(values.hp==newHp, "Failed");
-});
+    var values = await getAttrsAsync(["hp","rec"]);
+    var newHp=values.hp + values.rec;
+    await setAttrsAsync({hp:newHp});
+    values = await getAttrsAsync(["hp"]);
+    console.assert(values.hp==newHp, "Failed");
+  });
 ```
-The details of the above example aren't as important as the fact the function `gets`, `sets`, then `gets` again character attributes without the need to define callbacks.
+The details of the above example aren't as important as the fact the function `gets`, `sets`, then `gets` again character attributes without needing to define callbacks.
 
 Thanks.
 
