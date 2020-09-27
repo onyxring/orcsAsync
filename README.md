@@ -1,10 +1,10 @@
 # Roll20Async
-Adds support for asynchronous code in Roll20 Sheet Workers
+Adds support for asynchronous code in Roll20 Sheetworkers
 
-Insert this code into the top of your Sheet Worker to enable `setTimeout()`, `setInterval()`, Promises, and `async/await` syntax.
+Insert this code into the top of your Sheetworker to enable `setTimeout()`, `setInterval()`, Promises, and `async/await` syntax.
 
 1. What this script is addressing:  
-Sheet Workers currently lose the character's context with asynchronous callbacks.  For example, the following straightforward code *should* log a character's STR attribute every ten seconds:
+Sheetworkers currently lose the character's context with asynchronous callbacks.  For example, the following straightforward code *should* log a character's STR attribute every ten seconds:
 
 ```
 on("sheet:opened", ()=>{
