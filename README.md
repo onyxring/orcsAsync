@@ -45,3 +45,5 @@ on("sheet:opened", async ()=>{
 The details of the above example aren't as important as the fact the function `gets`, `sets`, then `gets` again character attributes without the need to define callbacks.
 
 Thanks.
+
+-Jim at OnyxRing
