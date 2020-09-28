@@ -38,7 +38,7 @@ These three functions return [Promises](https://javascript.info/async) which are
 ```
 on("sheet:opened", async ()=>{
     var values = await getAttrsAsync(["hp","rec"]);
-    var newHp=values.hp + values.rec;
+    var newHp=Number(values.hp||0) + Number(values.rec||0);
     await setAttrsAsync({hp:newHp});
     values = await getAttrsAsync(["hp"]);
     console.assert(values.hp==newHp, "Failed");
