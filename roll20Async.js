@@ -33,7 +33,7 @@
         return new Promise((resolve,reject)=>{
                 prevAcid=setActiveCharacterId(acid);  //in case the activeCharacterId has changed, restore it to what we were expecting and save the current value to restore later
                 try{
-                    getAttrs(props,(values)=>{  resolve(values[prop]); }); 
+                    getAttrs(props,(values)=>{  resolve(values); }); 
                 }
                 catch{ reject(); }
         }).finally(()=>{
