@@ -1,10 +1,17 @@
+    function isRunningOnServer(){ return self.dispatchEvent==undefined; }
     function setActiveCharacterId(charId){
         var oldAcid=getActiveCharacterId();
-        var ev = new CustomEvent("message");
-        ev.data={"id":"0", "type":"setActiveCharacter", "data":charId};
-        self.dispatchEvent(ev); 
-        return oldAcid;
-    }
+        var msg={"id":"0", "type":"setActiveCharacter", "data":charId};
+        
+        if(isRunningOnServer()==false){ //if in a browser, use "dispatchEvent" to process the message
+            var ev = new CustomEvent("message");
+            ev.data=msg; 
+            self.dispatchEvent(ev);
+        }else{ //otherwise, use the API (server) message processor, "onmessage"
+            self.onmessage({data:msg});
+        }
+        return oldAcid; //return what the value used to be, so calling code can be a little cleaner 
+    } 
     var _sIn=setInterval;
     setInterval=function(callback, timeout){
         var acid=getActiveCharacterId();
