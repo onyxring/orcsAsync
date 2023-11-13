@@ -51,6 +51,12 @@ on("sheet:opened", async ()=>{
 ```
 The details of the above example aren't as important as the fact the function `gets`, `sets`, then `gets` again character attributes without needing to define callbacks.
 
+### Part of ORCS
+This module is part of the [OnyxRing Client Script](https://github.com/onyxring/ORCS-for-Roll20) collection or scripts for Roll20.
+
+It is a standalone script, with no additional dependencies from other ORCS scripts; however, other scripts in the ORCS collection depend on it.  If you are not using the complete version of ORCS, but are including various standalone members of the collection piecemeal, orcsAsync may already be included by virtue of its inclusion by another member script.
+
+
 Thanks.
 
 -Jim at OnyxRing
