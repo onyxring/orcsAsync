@@ -6,7 +6,7 @@ ___
 Adds support for asynchronous code in Roll20 Sheetworkers
 
 ### What this script is addressing:  
-Sheetworkers currently lose the character's context with asynchronous callbacks.  For example, the following straightforward code *should* log a character's STR attribute every ten seconds:
+In the vanilla version of Roll20 platform, Sheetworkers currently lose the character's context with asynchronous callbacks.  For example, the following straightforward code *should* log a character's STR attribute every ten seconds:
 
 ```
 on("sheet:opened", ()=>{
