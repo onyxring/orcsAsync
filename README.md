@@ -1,6 +1,6 @@
 ___
 **_Note:_**
-Oct 2023 - Corrects a bug which caused it to fail when used within events triggered by the API.
+Nov 2023 - This repository as been renamed from Roll20Async to orcsAsync, in order to align it under the OnyxRing Client Scripts (ORCS) umbrella. 
 ___
 # Roll20Async
 Adds support for asynchronous code in Roll20 Sheetworkers
