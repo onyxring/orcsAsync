@@ -25,10 +25,10 @@ Instead, unfixed, it produces the following error message every ten seconds:
 The same error happens when trying to access attributes within the `setTimeout()` callback, as well as any attempt to wrap attribute access into Async/Await/Promise patterns.
 
 ### Installation
-To use this script in your own SheetWorkers, just insert the either the orcsAsync.js file, or the minimized version of that file, orcsAsync.min.js, into the top of your Sheetworker.  This enables `setTimeout()`, `setInterval()`, Promises, and `async/await` syntax to function as expected.
+To use this script in your own SheetWorkers, insert either the orcsAsync.js file, or the minimized version of that file (orcsAsync.min.js), into the top of your Sheetworker. 
 
 ### Examples of use:
-When added to your Sheetworker, the `setInterval()` example above will start working, as will similar uses of `setTimeout()`.  These functions now "remember" the character context they were previously loosing.
+When added to your Sheetworker, the `setInterval()` example above will start working, as will similar uses of `setTimeout()`.  These functions now "remember" the character context they were previously loosing, no additional changes need be made to enable these.
 
 Additionally, this script provides the following "asynchronous safe" versions of the traditional functions used to access attributes:
 
@@ -52,9 +52,9 @@ on("sheet:opened", async ()=>{
 The details of the above example aren't as important as the fact the function `gets`, `sets`, then `gets` again character attributes without needing to define callbacks.
 
 ### Part of ORCS
-This module is part of the [OnyxRing Client Script](https://github.com/onyxring/ORCS-for-Roll20) collection or scripts for Roll20.
+This module is part of the [OnyxRing Client Script](https://github.com/onyxring/ORCS-for-Roll20) collection of scripts for the Roll20 platform.
 
-It is a standalone script, with no additional dependencies from other ORCS scripts; however, other scripts in the ORCS collection depend on it.  If you are not using the complete version of ORCS, but are including various standalone members of the collection piecemeal, orcsAsync may already be included by virtue of its inclusion by another member script.
+It is a standalone script, with no additional dependencies; however, other scripts in the ORCS collection depend on this one.  If you are not using the complete version of ORCS, but are instead including portions of it in piecemeal fashion, orcsAsync may already be included by virtue of its inclusion by another member script.
 
 
 Thanks.
